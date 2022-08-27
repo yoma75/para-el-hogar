@@ -1,0 +1,60 @@
+.home {
+  padding: 0;
+}
+.home .box {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+  justify-content: flex-end;
+  padding: 2rem 9%;
+}
+.home .box .content {
+  width: 50rem;
+  background: rgba(9, 9, 9, 0.4);
+  border-radius: 0.8rem;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.home .box .content span {
+  font-size: 4rem;
+  color: #fff;
+}
+.home .box .content h3 {
+  font-size: 6rem;
+  color: #da197d;
+  padding-top: 0.5rem;
+  text-transform: uppercase;
+}
+.home .box .content p {
+  line-height: 2;
+  color: #10221b;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 3rem;
+  color: #da197d;
+  font-weight: bold;
+}
+
+@media (max-width: 991px) {
+  .home .box {
+    padding: 2rem;
+    justify-content: center;
+    background-position: right !important;
+  }
+  .home .box .content {
+    text-align: center;
+  }
+  .home .box .content span {
+    font-size: 3rem;
+  }
+  .home .box .content h3 {
+    font-size: 4rem;
+  }
+}/*# sourceMappingURL=home.css.map */
