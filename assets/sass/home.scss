@@ -1,0 +1,79 @@
+$green: #da197d;
+$black: #10221b;
+$white: #fff;
+$light-bg: #eee;
+$border: .2rem solid $black;
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+
+.home {
+  padding: 0;
+  
+  .box {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    justify-content: flex-end;  // texto a la derecha
+    padding: 2rem 9%;    
+
+    .content {
+      width: 50rem;
+      background: rgba(9, 9, 9, 0.4);  // opacidad sin afectar a los hijos
+      border-radius: .8rem;
+      text-align: center;
+      padding: 3rem 2rem;
+
+      span {
+        font-size: 4rem;
+        color: $white;
+      }
+      
+      h3 {
+        font-size: 6rem;
+        color: $green;
+        padding-top: .5rem;
+        text-transform: uppercase;
+      }
+
+      p {
+        line-height: 2;
+        color: $black;
+        font-size: 1.5rem;
+        padding: 1rem 0;
+        color: $white;
+      }
+    }
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 3rem;
+  color: $green;
+  font-weight: bold;
+}
+
+
+
+@media (max-width:991px) {
+  
+  .home .box {
+    padding: 2rem;
+    justify-content: center;
+    background-position: right !important;
+    
+    .content {
+      text-align: center;
+
+      span {
+        font-size: 3rem;
+      }
+
+      h3 {
+        font-size: 4rem;
+      }
+    }
+  }
+}

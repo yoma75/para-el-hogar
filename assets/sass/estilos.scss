@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
+// importo directamente desde la carpeta CSS 
+@import url(../css/home.css); 
+@import url(../css/category.css);
+@import url(../css/about.css);
+@import url(../css/shop.css);
+@import url(../css/packages.css);
+@import url(../css/services.css);
+
+
+$green: #da197d;
+$black: #10221b;
+$white: #fff;
+$light-bg: #eee;
+$border: .2rem solid $black;
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 1.5rem;
+}
+
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;  /* oculta el desbordamiento, eje X */
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $black;
+  }
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border: $border;
+  color: $black;
+  cursor: pointer;
+  background: none;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  border-radius: .8rem;
+
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+}
+
+.btnVerMas {
+  margin-top: 1rem;
+  display: inline-block;
+  border: 2px solid $green;
+  color: $white;
+  cursor: pointer;
+  background: none;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  border-radius: .8rem;
+  margin-bottom: 1.5rem;
+
+  &:hover {
+    background-color: $green;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 9%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+
+  // Coloca el header de color blanco cuando baja el scroll en el eje Y
+  &.active {
+    background: $white; 
+    box-shadow: $box-shadow;
+  }
+
+  .logo {
+    margin-right: auto;
+    font-size: 2.5rem;
+    color: $black;
+    font-weight: bolder;
+
+    i {
+      color: $green;
+      margin-right: 10px;
+    }
+  }
+
+  .navbar {
+
+    a {
+      margin-left: 2rem;
+      font-size: 1.7rem;
+      color: $black;
+
+      &:hover {
+        color: $green;
+      }
+    }
+
+    // icono 'X'
+    #nav-close {
+      font-size: 5rem;
+      cursor: pointer;
+      color: $black;
+      display: none;
+    }
+  }
+
+  .icons a,
+  .icons div {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: $black;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  #menu-btn {
+    display: none;
+  }
+}
+
+// search-form ----------
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transform: translateY(-110%);  /* oculta search-form*/
+
+  &.active {
+    transform: translateY(0%);  /* muestra search form al dar click en el icono (lupa) de busqueda */
+  }
+
+  #close-search {
+    position: absolute;
+    top: 2rem;
+    right: 2.5rem;
+    cursor: pointer;
+    color: $white;
+    font-size: 6rem;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  form {
+    width: 70rem;
+    margin: 0 2rem;
+    padding-bottom: 2rem;
+    border-bottom: .2rem solid $white;
+    display: flex;
+    align-items: center;
+
+    input {
+      width: 100%;
+      font-size: 2rem;
+      color: $white;
+      text-transform: none;
+      background: none;
+      padding-right: 2rem;
+
+      &:placeholder {
+        color: rgb(208, 199, 199);
+      }
+    }
+
+    label {
+      font-size: 3rem;
+      cursor: pointer;
+      color: $white;
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
+
+
+// media queries
+
+@media (max-width:1200px) {
+  
+  .header {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 3rem 2rem; 
+  }
+  
+}
+
+
+@media (max-width:991px) {
+  
+  html {
+    font-size: 55%;
+  }
+}
+
+
+@media (max-width:768px) {
+  
+  .header {
+
+    #menu-btn {
+      display: inline-block;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0; left: -110%;
+      background: $white;
+      z-index: 10000;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+
+      &.active {
+        left: 0;        
+        box-shadow: 0 0 0 100vh rgba(0, 0, 0, .8);
+      }
+
+      a {
+        margin: 1rem 0;
+        font-size: 3rem;
+      }
+
+      #nav-close {
+        display: block;
+        position: absolute;
+        top: 1rem; right: 2rem;
+      }
+    }
+  }
+}
+
+
+@media (max-width:450px) {
+  
+  html {
+    font-size: 50%;
+  }
+}

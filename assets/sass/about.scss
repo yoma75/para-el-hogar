@@ -1,0 +1,45 @@
+$green: #da197d;
+$black: #10221b;
+$white: #fff;
+$light-bg: #eee;
+$border: .2rem solid $black;
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+.about {
+  background: $light-bg;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  // contiene la imagen
+  .image {
+    flex: 1 1 42rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+
+    img {
+      width: 100%;
+      box-shadow: 4rem 4rem 0 rgba(0,0,0,.1);
+    }
+  }
+  
+  // contiene texto
+  .content {
+    flex: 1 1 42rem;
+
+    h3 {
+      font-size: 3rem;
+      color: $green;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: $black;
+      padding: 1rem 0;
+      line-height: 2;
+      text-transform: none;
+      text-align: justify;
+    }
+  }
+}

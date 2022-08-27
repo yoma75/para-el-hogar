@@ -1,0 +1,86 @@
+$green: #da197d;
+$black: #10221b;
+$white: #fff;
+$light-bg: #eee;
+$border: .2rem solid $black;
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+.shop {
+
+  .slide {
+    border: 1px solid rgba(193, 191, 191, 0.616);
+
+    // muestra los iconos
+    &:hover .image .icons {
+      transform: translateY(0);
+    }
+
+    .image {
+      position: relative;
+      overflow: hidden;
+      height: 30rem;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+        object-fit: cover;
+      }
+
+      .icons {
+        width: 100%;
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        text-align: center;
+        z-index: 10;
+        transform: translateY(7rem);  // oculta los iconos
+
+        a {
+          height: 4.5rem;
+          width: 4.5rem;
+          line-height: 4.5rem;
+          font-size: 1.7rem;
+          background: $black;
+          border-radius: .3rem;
+          color: $white;
+          margin: 0 .2rem;
+
+          &:hover {
+            background: $green;
+          }
+        }
+      }
+    }
+
+    .content {
+      padding: 1rem 0;
+      text-align: center;
+
+      h3 {
+        font-size: 2rem;
+        color: $black;
+      }
+
+      .price {
+        padding: 1rem 0;
+        padding-top: 0.5rem;
+        font-size: 2rem;
+        color: $green;
+      }
+
+      .stars i {
+        font-size: 1.7rem;
+        color: $black;
+      }
+    }
+  }
+}
+
+
+@media (max-width:450px) {
+  .heading {
+    font-size: 3rem;
+  }
+}

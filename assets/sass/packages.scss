@@ -1,0 +1,82 @@
+$green: #da197d;
+$black: #10221b;
+$white: #fff;
+$light-bg: #eee;
+$border: .2rem solid $black;
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 1.5rem;
+}
+
+.packages {
+  background: $light-bg;
+  margin-top: 3rem;
+
+  .box-container {
+    @include grid(32rem);
+
+    .box {
+      text-align: center;
+      background: $white;
+      border: 1px solid black;
+      box-shadow: $box-shadow;
+      border-radius: .5rem;
+
+      &:hover {
+        background: $black;
+
+        .content > * {
+          color: $white;
+        }
+
+        .btn {
+          border-color: $white;
+
+          &:hover {
+            background: $white;
+            color: $black;
+          }
+        }
+      }
+
+      .image {
+        height: 25rem;
+        overflow: hidden;  // la imagen img se ajusta a la caja padre
+        padding: 2rem;
+        padding-bottom: 0;
+        border-radius: .5rem;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: .5rem;
+        }
+      }
+
+      .content {
+        padding: 2rem;
+
+        h3 {
+          font-size: 2rem;
+          color: $black;
+        }
+
+        p {
+          font-size: 1.5rem;
+          color: $black;
+          padding: 1rem 0;
+          line-height: 2;
+        }
+
+        .price {
+          font-size: 2rem;
+          color: $green;
+        }
+      }
+    }
+  }
+}
