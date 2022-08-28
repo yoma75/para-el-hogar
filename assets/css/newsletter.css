@@ -1,0 +1,46 @@
+.newsletter {
+  background: #fff;
+}
+.newsletter .content {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+.newsletter .content p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #10221b;
+}
+.newsletter .content form {
+  margin-top: 2rem;
+  background: #eee;
+  border-radius: 5rem;
+  border: 0.2rem solid #10221b;
+  padding: 0.7rem;
+  display: flex;
+}
+.newsletter .content form .email {
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 1.5rem;
+  color: #10221b;
+  padding: 0 1.3rem;
+}
+.newsletter .content form .btn {
+  margin-top: 0;
+  border-radius: 5rem;
+  background: #10221b;
+  color: #fff;
+}
+.newsletter .content form .btn:hover {
+  border-color: #da197d;
+  background: #da197d;
+}
+
+.clients {
+  background: #eee;
+}
+.clients .slide {
+  text-align: center;
+}/*# sourceMappingURL=newsletter.css.map */

@@ -1,0 +1,62 @@
+$green: #da197d;
+$black: #10221b;
+$white: #fff;
+$light-bg: #eee;
+$border: .2rem solid $black;
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+
+.newsletter {
+  background: $white;
+
+  .content {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+
+    p {
+      font-size: 1.5rem;
+      line-height: 2;
+      color: $black;
+    }
+
+    form {
+      margin-top: 2rem;
+      background: $light-bg;
+      border-radius: 5rem;
+      border: $border;
+      padding: .7rem;
+      display: flex;
+
+      .email {
+        width: 100%;
+        background: none;
+        text-transform: none;
+        font-size: 1.5rem;
+        color: $black;
+        padding: 0 1.3rem;
+      }
+
+      .btn {
+        margin-top: 0;
+        border-radius: 5rem;
+        background: $black;
+        color: $white;
+        
+        &:hover {
+          border-color: $green;
+          background: $green;
+        }
+      }
+    }
+  }
+}
+
+
+.clients {
+  background: $light-bg;
+
+  .slide {
+    text-align: center;
+  }
+}
